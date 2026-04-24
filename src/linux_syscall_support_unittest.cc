@@ -62,8 +62,8 @@ namespace linux_syscall_support {
 #include <asm/posix_types.h>
 #include <asm/types.h>
 #include <errno.h>
-#include <linux/types.h>
-#include <linux/unistd.h>
+#include <stdio.h>
+#include <sys/stat.h>
 #include <signal.h>
 #include <sys/socket.h>
 #include <sys/statfs.h>

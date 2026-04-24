@@ -33,7 +33,6 @@
 
 #define __STDC_LIMIT_MACROS
 #include <assert.h>
-#include <bits/wordsize.h>
 #include <endian.h>
 #include <errno.h>
 #include <fcntl.h>

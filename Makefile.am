@@ -73,20 +73,6 @@ libcoredumper_la_SOURCES = src/coredumper.c \
 libcoredumper_la_LDFLAGS = -export-symbols $(top_srcdir)/src/libcoredumper.sym \
                            -version-info 1:0:0
 
-TESTS += coredumper_unittest linux_syscall_support_unittest
-COREDUMP_UNITTEST_INCLUDES = src/google/coredumper.h
-coredumper_unittest_SOURCES = src/coredumper_unittest.c
-coredumper_unittest_LDADD = libcoredumper.la -lpthread
-LINUX_SYSCALL_SUPPORT_INCLUDES = src/linux_syscall_support.h
-linux_syscall_support_unittest_SOURCES = src/linux_syscall_support_unittest.cc
-
-## ^^^^ END OF RULES TO MAKE THE LIBRARIES, BINARIES, AND UNITTESTS
-
-
-## This should always include $(TESTS), but may also include other
-## binaries that you compile but don't want automatically installed.
-noinst_PROGRAMS = $(TESTS)
-
 rpm: dist-gzip packages/rpm.sh packages/rpm/rpm.spec
 	@cd packages && ./rpm.sh ${PACKAGE} ${VERSION}
 

@@ -32,6 +32,7 @@
  */
 
 #include <stdio.h>         /* needed for NULL on some powerpc platforms (?!) */
+#include <unistd.h>
 #include <sys/prctl.h>
 #include "thread_lister.h"
 #include "linuxthreads.h"

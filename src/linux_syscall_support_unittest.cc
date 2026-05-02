@@ -32,6 +32,7 @@
 
 // Include linux_syscall_support.h as the first file, so we will compilation
 // errors if it has unexpected dependencies on other header files.
+#include <sys/uio.h>
 #include "linux_syscall_support.h"
 
 #include <stdio.h>
@@ -69,6 +70,13 @@ namespace linux_syscall_support {
 #include <sys/statfs.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <string.h>
+
+
+
+
+
+
 
 // Set by the signal handler to show that we received a signal
 static int signaled;

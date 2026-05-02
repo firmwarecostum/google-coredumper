@@ -69,6 +69,7 @@ namespace linux_syscall_support {
 #include <sys/statfs.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <cstring>
 
 // Set by the signal handler to show that we received a signal
 static int signaled;
